@@ -1,0 +1,131 @@
+.hero {
+    margin-top: 80px;
+    @include md {
+        margin-top: 100px;
+    }
+    @include lg {
+        margin-top: 130px;
+    }
+    &__content {
+        width: 100%;
+        @include lg {
+            width: 50%;
+        }
+        @include xl {
+            width: 45%;
+        }
+        &--text {
+            h1 {
+                font-weight: 600;
+                margin-bottom: 16px;
+                font-size: 40px;
+                @include md {
+                    font-size: 52px;
+                }
+                @include xl {
+                    font-size: 64px;
+                }
+            }
+            p{
+                color: $color-gray-1;
+                margin-bottom: 16px;
+            }
+        }
+        &--form {
+            padding: 24px 16px 24px 0;
+            .form-select {
+                box-shadow: none !important;
+                color: $color-black-1;
+                border: 1px solid $color-gray-1 !important;
+                border-radius: 0;
+                width: 100%;
+                padding-block: 12px;
+                @include md {
+                    width: 60%;
+                }
+              }
+            
+            button {
+                padding: 12px 24px;
+                width: fit-content;
+                background-color: $color-primary-1;
+                color: #fff;
+                border: none;
+                outline: none;
+                transition: background-color 0.3s ease-in;
+                &:hover {
+                    background-color: $color-secondary-1;
+                }
+            }
+        }
+    }
+    &__image {
+        width: 100%;
+        @include lg {
+            width: 50%;
+        }
+        @include xl {
+            width: 55%;
+        }
+        position: relative;
+        &__shape {
+            img {
+                position: absolute;
+                z-index: -1;
+                height: 100%;
+                top: 0px;
+                left: 60%;
+                transform: translateX(-50%);
+            }
+        }
+        &__text {
+            position: absolute;
+            background-color: $color-secondary-1;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 16px;
+            border-radius: 8px;
+            .icon-image {
+                width: 20px;
+                height: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &--one {
+
+                @include sm {
+                    top: 30%;
+                    left: 10%;
+                }
+            }
+            &--two {
+                @include sm {
+                    bottom: 15%;
+                    left: 5%;
+                }
+            }
+            &--three {
+                @include sm {
+                    left: 55%;
+                    transform: translateX(-50%);
+                    bottom: 2%;
+                }
+                @include lg {
+                    bottom: -5%;
+                }
+                @include xl {
+                    bottom: 2%;
+                }
+            }
+        }
+        &--lg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
