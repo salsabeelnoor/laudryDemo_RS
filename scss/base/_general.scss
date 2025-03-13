@@ -16,6 +16,24 @@
   p{
     margin-bottom: 0;
   }
+//   ----------------------- section ------------------------
+.section {
+    padding-block: 48px 24px;
+    &__title {
+        text-align: center;
+        p {
+            color: $color-gray-1;
+            font-size: 16px;
+            padding-bottom: 8px;
+        }
+        h2 {
+            color: $color-primary-1;
+            font-size: 48px;
+            font-weight: 600;
+        }
+    }
+    
+}
 //   ----------------------- font colors -----------------------
 .color-primary-1 {
     color: $color-primary-1;
